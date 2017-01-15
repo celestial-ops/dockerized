@@ -1,0 +1,23 @@
+version: '2'
+services:
+  celestial:
+    ports:
+     - "8443:8443"
+    image: 'narkisr/celestial'
+    volumes:
+     - ./celestial.edn:/etc/celestial/celestial.edn
+     - ./log:/var/log/
+    depends_on:
+      - redis
+      - elasticsearch
+  redis:
+    ports:
+      - "6379:6379"
+    image: "redis:alpine"
+  elasticsearch:
+    image: "elasticsearch:2.4.4"
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+volumes:
+   celestial:
