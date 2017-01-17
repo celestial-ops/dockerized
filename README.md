@@ -1,18 +1,18 @@
 # Intro
 
-A docker image and compose setup.
+A docker image and compose setup for running Celestial
+
 # Build
 
 To build the image:
 ```bash
-$ docker build . 
+$ sudo docker build . 
 ```
-
 
 To launch a working install:
 
 ```bash
-$ docker-compose run -p 8443
+$ sudo docker-compose run -p 8443:8443  celestial
 ```
 
 # Copyright and license
