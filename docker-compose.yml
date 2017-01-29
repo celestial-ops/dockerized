@@ -3,7 +3,7 @@ services:
   celestial:
     ports:
      - "8443:8443"
-    image: 'narkisr/celestial'
+    image: 'narkisr/celestial:0.13.5'
     volumes:
      - ./celestial.edn:/etc/celestial/celestial.edn
      - ./log:/var/log/
